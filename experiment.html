@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi! I'm Nguyen</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        * {
+            background-color: lightblue;
+            _border: 1px black solid;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>This is Nguyen</h1>
+        <nav>
+            <a href="/index.html">Let's Start Here!</a> |
+            <a href="/projects.html">Projects</a> |
+            <a href="/other-things.html">Other things I do</a> |
+            <a href="/my-journey.html">My Journey</a> |
+            <a href="/contacts.html">Contacts</a> |
+            <a href="/experiment.html">Experiment</a>
+        </nav>
+    </header>
+        
+    <main>
+        <h3>Table content</h3>
+        <table>
+            <caption>Courses I'm taking in WI-22</caption>
+            <colgroup>
+                <col span="1" class ="id">
+                <col span="1" class ="name">
+                <col span="1" class ="instructor">
+            </colgroup>
+            <tr>
+                <th scope="col">Course's ID</th>
+                <th scope="col">Course's Name</th>
+                <th scope="col">Instructor</th>
+            </tr>
+            <tr>
+                <td>CSE 134B</td>
+                <td>Web Client Languages</td>
+                <td>Powell</td>
+            </tr>
+            <tr>
+                <td>CSE 120</td>
+                <td>Principle of Computer Operating System</td>
+                <td>Pasquale</td>
+            </tr>
+            <tr>
+                <td>MGT 175</td>
+                <td>Supply Chain Management</td>
+                <td>Gopal</td>
+            </tr>
+            <tr>
+                <td>POLI 150A</td>
+                <td>Politics of Immigration</td>
+                <td>Wong</td>
+            </tr>
+        </table>
+
+        <h3>Media content</h3>
+        <p>Listen to the rythm of the falling rain</p>
+        <div>
+            <audio
+                controls
+                src="/media/rain.mp3">
+                    Your browser does not support the
+                    <code>audio</code> element.
+            </audio>
+        </div>
+        <p>Cat is your best friend</p>
+        <div>
+            <video controls width="350">
+                <source src="/media/cat_vid.mp4"
+                        type="video/mp4">
+                Sorry, your browser doesn't support embedded videos.
+            </video>
+        </div>
+
+        <h3><span style="background-color: orange;">Inline text</span></h3>
+        <p>This is a place I would <em>really like to visit</em>.</p>
+        <p>Look at all the <pre>s    p    a    c    e</pre> between me and Paris</p>
+        <iframe
+            title="Inline Frame Example"
+            width="600"
+            height="400"
+            src="https://www.mapquest.com/search/result?slug=%2Fus%2Ftexas%2Feiffel-tower-304238727&query=Eiffel%20Tower&page=0&mqId=304238727&index=0">
+        </iframe>
+        
+        <h3>Form</h3>
+        <label for="mood">Choose your mood for the day:</label>
+        <input list="mood-list" id="mood-choice" name="mood-choice" />
+
+        <datalist id="mood-list">
+            <option value="Happy">
+            <option value="Motivated">
+            <option value="Neutral">
+            <option value="Under the weather">
+            <option value="Need a break!!!">
+        </datalist>
+
+        <h3>Interactive elements</h3>
+        <details>
+            <summary>Here's a widely known secret</summary>
+            You're beautiful just the way you are!
+        </details>
+        <h3>Web Components</h3>
+        <p>Do you want to build a snowman? Click the below button to build more snowman!</p>
+
+        <button onclick="showContent()">More snowman!</button>
+        <div id="snowman">
+            <p>&#9924</p>
+        </div>
+        <template id="template" >
+            <p>&#9924</p>
+        </template>
+
+        <script>
+        function showContent() {
+            var position = document.querySelector('#snowman');
+            var temp = document.querySelector('#template');
+            var clon = temp.content.cloneNode(true);
+            position.appendChild(clon);
+        }
+        </script>
+
+    </main>
+
+    <footer>
+        <hr>
+        <p> Here's a quote for the day: Be nice to yourself!</p>
+    </footer>
+
+</body>
+</html>
