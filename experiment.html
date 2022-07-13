@@ -13,7 +13,7 @@
         }
     </style>
     <script type="application/javascript">
-        function draw() {
+        function drawSmiley() {
           const canvas = document.getElementById('canvas');
           if (canvas.getContext) {
             const ctx = canvas.getContext('2d');
@@ -31,7 +31,8 @@
         }
     </script>
 </head>
-<body onload="draw();">
+<body onload="drawSmiley();"> 
+    <!-- w3 does not have ^ semi-colon but MDN does... -->
     <header>
         <h1>This is Nguyen</h1>
         <nav>
@@ -88,7 +89,7 @@
             </video>
         </div>
 
-        <h3><span style="background-color: orange;">Inline text</span></h3>
+        <h3><span>Inline text</span></h3>
         <p>This is a place I would <em>really like to visit</em>.</p>
         <p>Look at all the <pre>s    p    a    c    e</pre> between me and Paris</p>
         <iframe
@@ -136,6 +137,8 @@
         }
         </script>
 
+        <!-- Why can you put script for template inside and it works but not the script for canvas -->
+
         <!-- <script>
             function drawSmiley() {
                 const canvas = document.getElementById('canvas');
@@ -172,7 +175,7 @@
 
     <footer>
         <hr>
-        <p> Here's a quote for the day: Be nice to yourself!</p>
+        <p> Here's a quote for the day: <b>Be nice to yourself!</b></p>
     </footer>
 
 </body>
